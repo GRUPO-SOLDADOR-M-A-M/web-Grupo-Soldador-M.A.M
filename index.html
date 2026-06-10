@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grupo Soldador M.A.M</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    
+    <header class="navbar">
+      <div class="logo-nav">Grupo Soldador <span>M.A.M</span></div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#contenedor-principal">Inicio</a></li>
+          <li><a href="#contenedor-servicios">Servicios</a></li>
+          <li><a href="#contenedor-ubicacion">Ubicación</a></li>
+          <li><a href="#contenedor-contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="app">
+      <section id="contenedor-principal" class="seccion-hero">
+        <div class="hero-texto">
+          <h1>Especialistas en <span>Soldadura</span></h1>
+          <p>Chasis, escapes, estructuras metálicas y suspensión. Calidad y resistencia en cada punto de trabajo.</p>
+          <a href="#contenedor-servicios" class="btn-naranja">Ver Servicios</a>
+        </div>
+        <div class="hero-3d" id="contenedor-3d">
+          <canvas id="lienzo3d"></canvas>
+        </div>
+      </section>
+
+      <section id="contenedor-servicios" class="seccion-servicios">
+        <h2 class="titulo-servicios">BRINDAMOS CALIDAD EN<br>CADA SOLDADURA</h2>
+        <div class="grid-servicios">
+          <div class="tarjeta-servicio">
+            <div class="contenido-tarjeta">
+              <h3>SOLDADURA<br>AUTOMOTRIZ</h3>
+              <p>Chasis, soportes, escapes, defensa, lamina, reparacion de oxido, estructuras</p>
+            </div>
+            <div class="adorno-plateado"></div>
+          </div>
+          <div class="tarjeta-servicio">
+            <div class="contenido-tarjeta">
+              <h3>SUSPENSIONES<br>EN GENERAL</h3>
+              <p>Para carros, camionetas, camiones, carga pesada, refuerzos reparacion, modificacion de muelles, ballestas y frenos</p>
+            </div>
+            <div class="adorno-plateado"></div>
+          </div>
+          <div class="tarjeta-servicio">
+            <div class="contenido-tarjeta">
+              <h3>ESTRUCTURAS<br>METALICAS</h3>
+              <p>Portones, rejas protecciones, techos bases, barandales, estructuras en general</p>
+            </div>
+            <div class="adorno-plateado"></div>
+          </div>
+        </div>
+        <a href="tel:7223136660" class="cta-llamada">
+          <span class="texto-llama">LLAMA AHORA</span>
+          <span class="numero-llama">722 313 6660</span>
+        </a>
+      </section>
+
+      <section id="contenedor-ubicacion" class="seccion-ubicacion">
+        <h2 class="titulo-seccion-azul">ENCUÉNTRANOS AQUÍ</h2>
+        <p class="texto-ubicacion">Visítanos en Monino Abajo Temoaya, Estado de México.</p>
+        <div class="mapa-contenedor">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d15048.051087250176!2d-99.60828209476568!3d19.455016151708982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e2!4m5!1s0x85d2724b3a3b6e1b%3A0xa6bc4fe0dfde625d!2sTemoaya%2C%20State%20of%20Mexico!3m2!1d19.4653884!2d-99.59404169999999!4m3!3m2!1d19.4465868!2d-99.6029385!5e0!3m2!1sen!2smx!4v1781116535345!5m2!1sen!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </section>
+
+      <section id="contenedor-contacto" class="seccion-contacto">
+        <h2 class="titulo-seccion-blanco">SOLICITA TU COTIZACIÓN</h2>
+        <div class="contacto-grid">
+          <form class="formulario-contacto">
+            <input type="text" placeholder="Tu Nombre" required>
+            <input type="tel" placeholder="Tu Teléfono" required>
+            <textarea placeholder="Describe tu proyecto..." rows="4" required></textarea>
+            <button type="submit" class="btn-naranja btn-enviar">Enviar Mensaje</button>
+          </form>
+          <div class="info-directa">
+            <h3>Atención Inmediata:</h3>
+            <p>Si es una urgencia, escríbenos o llámanos directamente.</p>
+            <a href="https://wa.me/527223136660" class="btn-whatsapp" target="_blank">📲 WhatsApp</a>
+            <a href="tel:7223136660" class="btn-llamada-contacto">📞 722 313 6660</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

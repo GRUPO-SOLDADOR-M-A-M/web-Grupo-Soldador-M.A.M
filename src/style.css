@@ -1,0 +1,418 @@
+/* Variables con tu paleta de colores exacta */
+:root {
+  --color-naranja: #E65602;
+  --color-azul-oscuro: #00163A;
+  --color-gris-oscuro: #1E1E1E;
+  --color-blanco: #FFFFFF;
+  --gradiente-naranja: linear-gradient(135deg, #E65602 0%, #ff8c42 100%);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background-color: var(--color-blanco); /* NUEVO: Fondo general blanco */
+  color: var(--color-gris-oscuro); /* Texto oscuro para que se lea bien */
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+/* --- BARRA DE NAVEGACIÓN --- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.95); /* NUEVO: Menú blanco con transparencia */
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  z-index: 100;
+  border-bottom: 2px solid var(--color-naranja);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Sombra suave para el menú */
+}
+
+.logo-nav {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-azul-oscuro); /* NUEVO: Letras del logo en azul */
+}
+
+.logo-nav span {
+  color: var(--color-naranja);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  color: var(--color-azul-oscuro); /* NUEVO: Links en azul oscuro */
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: var(--color-naranja);
+}
+
+/* --- ESTILOS DE LA SECCIÓN PRINCIPAL --- */
+.seccion-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 0 5%;
+  padding-top: 80px; 
+  background-color: var(--color-blanco); /* NUEVO: Fondo blanco */
+}
+
+.hero-texto {
+  flex: 1;
+  max-width: 50%;
+  z-index: 2;
+}
+
+.hero-texto h1 {
+  font-size: 4rem;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: var(--color-azul-oscuro); /* NUEVO: Título azul para contrastar con el fondo blanco */
+}
+
+.hero-texto h1 span {
+  color: var(--color-naranja);
+}
+
+.hero-texto p {
+  font-size: 1.2rem;
+  color: #555555; /* NUEVO: Gris oscuro para el párrafo */
+  margin-bottom: 30px;
+}
+
+.btn-naranja {
+  background: var(--gradiente-naranja);
+  color: var(--color-blanco);
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  display: inline-block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(230, 86, 2, 0.4);
+}
+
+.btn-naranja:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(230, 86, 2, 0.6);
+}
+
+/* Contenedor que encierra el Canvas 3D */
+.hero-3d {
+  flex: 1;
+  width: 100%;
+  height: 80vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px; 
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 22, 58, 0.3); /* Sombra ajustada para fondo blanco */
+}
+
+#lienzo3d {
+  width: 100% !important;
+  height: 100% !important;
+  outline: none;
+  border-radius: 30px; 
+}
+
+
+/* --- SECCIÓN SERVICIOS (Fondo Blanco, Tarjetas Azules) --- */
+.seccion-servicios {
+  padding: 100px 5% 60px;
+  background-color: var(--color-blanco); /* NUEVO: Fondo blanco */
+  text-align: center;
+}
+
+.titulo-servicios {
+  color: var(--color-naranja);
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  line-height: 1.2;
+}
+
+.grid-servicios {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Las tarjetas invertidas */
+.tarjeta-servicio {
+  background-color: var(--color-azul-oscuro); /* NUEVO: Tarjetas en azul oscuro */
+  border-radius: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* Sombra más sutil */
+}
+
+.contenido-tarjeta {
+  padding: 30px 20px 40px;
+  flex-grow: 1;
+}
+
+.tarjeta-servicio h3 {
+  color: var(--color-naranja);
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.tarjeta-servicio p {
+  color: #e0e0e0; /* NUEVO: Texto claro para contrastar sobre la tarjeta azul */
+  font-weight: 800;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Efecto visual de la curva plateada */
+.adorno-plateado {
+  height: 50px;
+  background: linear-gradient(180deg, #ffffff 0%, #cccccc 40%, #777777 100%);
+  border-top-left-radius: 60% 30px;
+  border-top-right-radius: 10% 10px;
+  margin-top: -30px;
+  border-bottom: 5px solid var(--color-blanco); /* NUEVO: Borde blanco para fundirse con la sección */
+}
+
+/* Botón de Llamar Inferior */
+.cta-llamada {
+  margin-top: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-naranja);
+  border-radius: 50px;
+  border: 3px solid var(--color-azul-oscuro); /* NUEVO: Borde azul para mayor impacto */
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  box-shadow: 0 10px 20px rgba(230, 86, 2, 0.3);
+}
+
+.cta-llamada:hover {
+  transform: scale(1.05);
+}
+
+.texto-llama {
+  background-color: var(--color-azul-oscuro);
+  color: var(--color-blanco);
+  padding: 15px 25px;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.numero-llama {
+  color: var(--color-blanco);
+  padding: 15px 30px;
+  font-weight: 900;
+  font-size: 1.8rem;
+}
+
+/* Ajustes Responsivos */
+@media (min-width: 768px) {
+  .grid-servicios {
+    flex-direction: row;
+  }
+  .titulo-servicios { font-size: 3rem; }
+  .tarjeta-servicio h3 { font-size: 1.6rem; }
+}
+
+@media (max-width: 768px) {
+  .seccion-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-texto {
+    max-width: 100%;
+  }
+  .hero-texto h1 {
+    font-size: 2.8rem;
+  }
+  .hero-3d {
+    height: 50vh;
+    margin-top: 20px;
+  }
+  .nav-links {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .cta-llamada {
+    flex-direction: column;
+    border-radius: 15px;
+    width: 100%;
+  }
+  .texto-llama { width: 100%; }
+  .numero-llama { width: 100%; padding: 10px; }
+}
+
+/* --- TÍTULOS GENERALES PARA SECCIONES --- */
+.titulo-seccion-azul {
+  color: var(--color-azul-oscuro);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.titulo-seccion-blanco {
+  color: var(--color-naranja);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+/* --- SECCIÓN UBICACIÓN --- */
+.seccion-ubicacion {
+  padding: 100px 5% 80px;
+  background-color: var(--color-blanco);
+  text-align: center;
+}
+
+.texto-ubicacion {
+  color: var(--color-gris-oscuro);
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mapa-contenedor {
+  width: 100%;
+  max-width: 1000px;
+  height: 450px;
+  margin: 0 auto;
+  border-radius: 20px;
+  background-color: #e0e0e0; /* Color temporal mientras carga la API */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* --- SECCIÓN CONTACTO --- */
+.seccion-contacto {
+  padding: 100px 5%;
+  background-color: var(--color-azul-oscuro);
+  text-align: center;
+  border-top: 5px solid var(--color-naranja);
+}
+
+.contacto-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: var(--color-blanco);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+  border-color: var(--color-naranja);
+  outline: none;
+}
+
+.btn-enviar {
+  cursor: pointer;
+  border: none;
+  width: 100%;
+}
+
+.info-directa {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  color: var(--color-blanco);
+  text-align: left;
+}
+
+.info-directa h3 {
+  font-size: 1.8rem;
+  color: var(--color-naranja);
+}
+
+.btn-whatsapp {
+  background-color: #25D366; /* Verde oficial de WhatsApp */
+  color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.btn-whatsapp:hover { transform: scale(1.05); }
+
+.btn-llamada-contacto {
+  background-color: transparent;
+  color: var(--color-blanco);
+  padding: 15px 20px;
+  border-radius: 10px;
+  border: 2px solid var(--color-blanco);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.btn-llamada-contacto:hover {
+  background-color: var(--color-blanco);
+  color: var(--color-azul-oscuro);
+}
+
+/* Ajustes para PC */
+@media (min-width: 768px) {
+  .contacto-grid {
+    flex-direction: row;
+    text-align: left;
+  }
+  .formulario-contacto { flex: 1; }
+  .info-directa { flex: 1; padding-left: 30px; }
+}
